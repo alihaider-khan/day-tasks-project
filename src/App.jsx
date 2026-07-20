@@ -51,7 +51,7 @@ export default function App() {
   }
  
   useEffect(()=>{
-    const savetask = localStorage.getItem('my-day-task')
+    const savetask = localStorage.getItem('my-day-task') || "[]"
     const update=  JSON.parse(savetask)
     if(update.length>0){
       setloading('Loading..')
